@@ -41,7 +41,7 @@ void main()
 	using myReverseVectorIterator = std::vector<int>::reverse_iterator;
 	using myReverseDequeIterator = std::deque<int>::reverse_iterator;
 	using myReverseListIterator = std::list<int>::reverse_iterator;
-	using myReverseMapIterator = std::map<int>::reverse_iterator;
+	using myReverseMapIterator = std::map<char,int>::reverse_iterator;
 	using myReverseSetIterator = std::set<int>::reverse_iterator;
 
 	/////////////////////////////////////////
@@ -53,12 +53,14 @@ void main()
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
+	std::cout << std::endl;
 
 	std::cout << "VECTOR REVERSE_ITERATOR: ";
 	for (myReverseVectorIterator it = vector.rbegin(); it != vector.rend(); it++)
 	{
 		std::cout << *it << " ";
 	}
+	std::cout << std::endl;
 	std::cout << std::endl;
 
 	//DEQUE
@@ -68,12 +70,14 @@ void main()
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
+	std::cout << std::endl;
 
 	std::cout << "DEQUE REVERSE_ITERATOR: ";
 	for (myReverseDequeIterator it = deque.rbegin(); it != deque.rend(); it++)
 	{
 		std::cout << *it << " ";
 	}
+	std::cout << std::endl;
 	std::cout << std::endl;
 
 	//LIST
@@ -83,12 +87,14 @@ void main()
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
+	std::cout << std::endl;
 
 	std::cout << "LIST REVERSE_ITERATOR: ";
 	for (myReverseListIterator it = list.rbegin(); it != list.rend(); it++)
 	{
 		std::cout << *it << " ";
 	}
+	std::cout << std::endl;
 	std::cout << std::endl;
 
 	//FORWARD_LIST
@@ -98,6 +104,7 @@ void main()
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
+	std::cout << std::endl;
 
 	//MAP
 	std::cout << "MAP: ";
@@ -106,12 +113,14 @@ void main()
 		std::cout << it->first << "=" << it->second << " ";
 	}
 	std::cout << std::endl;
+	std::cout << std::endl;
 
 	std::cout << "MAP REVERSE_ITERATOR: ";
 	for (myReverseMapIterator it = map.rbegin(); it != map.rend(); it++)
 	{
-		std::cout << *it << " ";
+		std::cout << it->first << "=" << it->second << " ";
 	}
+	std::cout << std::endl;
 	std::cout << std::endl;
 
 	//SET
@@ -120,6 +129,7 @@ void main()
 	{
 		std::cout << *it << " ";
 	}
+	std::cout << std::endl;
 	std::cout << std::endl;
 
 	std::cout << "SET REVERSE_ITERATOR: ";
